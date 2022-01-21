@@ -41,8 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Entity.cs" />
-    <Compile Include="Classes\Methods.cs" />
+    <Compile Include="Classes\Characters\Enemy.cs" />
+    <Compile Include="Classes\Characters\Entity.cs" />
+    <Compile Include="Classes\Characters\Methods.cs" />
+    <Compile Include="Classes\Characters\NPC.cs" />
+    <Compile Include="Classes\Characters\Player.cs" />
+    <Compile Include="Classes\Items\Armors\Armor.cs" />
+    <Compile Include="Classes\Items\Consumable.cs" />
+    <Compile Include="Classes\Items\Item.cs" />
+    <Compile Include="Classes\Items\QuestItem.cs" />
+    <Compile Include="Classes\Items\Weapons\Weapon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
