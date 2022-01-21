@@ -8,7 +8,7 @@ namespace ClassLib.Classes.Items
 {
     public abstract class Item
     {
-        protected string _name { get; set; }  = "no_item"
+        protected string _name { get; set; } = "no_item";
 
         public Item(string name)
         {
