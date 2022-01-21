@@ -9,12 +9,16 @@ namespace ClassLib.Classes.Items
     public abstract class Item
     {
         protected string _name { get; set; } = "no_item";
-
-        public Item(string name)
+        protected int _lvlRequirement { get; set; }
+        public Item(string name, int lvlRequirement)
         {
             if (name != "")
             {
                 this._name = name;  
+            }
+            if (lvlRequirement > 0)
+            {
+                _lvlRequirement = lvlRequirement;
             }
         }
     }

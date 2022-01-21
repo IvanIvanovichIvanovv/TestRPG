@@ -8,8 +8,13 @@ namespace ClassLib.Classes.Items
 {
     public class QuestItem : Item
     {
-        public QuestItem(string name) : base(name)
+        protected string _description { get { return this._description; } set { if (value != "") { this._description = value; } } }
+        public QuestItem(string description, string name, int lvlRequirement) : base(name, lvlRequirement)
         {
+            if (description != "")
+            {
+                this._description = description;
+            }
         }
     }
 }
