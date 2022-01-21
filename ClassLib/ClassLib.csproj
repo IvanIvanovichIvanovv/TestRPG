@@ -45,6 +45,10 @@
     <Compile Include="Classes\Characters\Entity.cs" />
     <Compile Include="Classes\Characters\NPC.cs" />
     <Compile Include="Classes\Characters\Player.cs" />
+    <Compile Include="Classes\Events\Event.cs" />
+    <Compile Include="Classes\Events\FriendlyEncounter.cs" />
+    <Compile Include="Classes\Events\HostileEncounter.cs" />
+    <Compile Include="Classes\Events\RandomEncounter.cs" />
     <Compile Include="Classes\Items\Armors\Armor.cs" />
     <Compile Include="Classes\Items\Consumable.cs" />
     <Compile Include="Classes\Items\Item.cs" />

@@ -31,7 +31,31 @@
                 }
             }
         }
-        protected int _gold { get; set; }
+        protected int _gold
+        {
+            get
+            {
+                return this._gold;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    this._gold = value;
+                }
+            }
+        }
+        protected int _level
+        {
+            get
+            {
+                return this._level;
+            }
+            set
+            {
+                this._level = value;
+            }
+        }
 
         #region staty
         protected int _strength
@@ -122,7 +146,7 @@
         #endregion
         #endregion 
 
-        public Entity(string name, int gold, int strength, int dexterity, int intelligence, int charisma, int endurance, double maxHealthPoints)
+        public Entity(string name, int gold, int strength, int dexterity, int intelligence, int charisma, int endurance, double maxHealthPoints, int level)
         {
             if (name != "")
             {
@@ -134,8 +158,8 @@
                 this._healthPoints = maxHealthPoints;
             }
 
-            int[] statTable = new int[5] { strength, dexterity, intelligence, charisma, endurance };
-            int[] _statTable = new int[5] { _strength, _dexterity, _intelligence, _charisma, _endurance };
+            int[] statTable = new int[6] { strength, dexterity, intelligence, charisma, endurance, level };
+            int[] _statTable = new int[6] { _strength, _dexterity, _intelligence, _charisma, _endurance, _level };
 
             for (int i = 0; i < statTable.Length; i++)
             {
@@ -145,19 +169,25 @@
                 }
             }
         }
-        public string[] PlayerData() 
+        public bool LifeCheck()
         {
-            string[] playerData= new string[9];
-            playerData[0] = $"Name,{_name}";
-            playerData[1] = $"HealthPoints,{_healthPoints}";
-            playerData[2] = $"Gold,{_gold}";
-            playerData[3] = $"Strength,{_strength}";
-            playerData[4] = $"Dexterity,{_dexterity}";
-            playerData[5] = $"Intelligence,{_intelligence}";
-            playerData[6] = $"Charisma,{_charisma}";
-            playerData[7] = $"Endurance,{_endurance}";
-            playerData[8]= $"MaxHealthPoints,{_maxHealthPoints}";
-            return playerData;
+            if (this._healthPoints > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
+        public int GetDexterity() { return _dexterity; }
+        public int GetIntelligence() { return _intelligence; }
+        public int GetLevel() { return _level; }
+        public void SubtractHealthPoints(int Amount)
+        {
+            _healthPoints -= Amount;
+            if (!this.LifeCheck()) { this.Death(); }     
+        }
+        public void Death() { }
     }
 }

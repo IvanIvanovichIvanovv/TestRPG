@@ -19,6 +19,7 @@ namespace ClassLib.Classes
                     filewrite.WriteLine(String.Format(playerData[i]));
                 }
             }
+            
         }
     }
 }
