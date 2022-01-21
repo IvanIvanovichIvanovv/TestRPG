@@ -2,17 +2,122 @@
 {
     public abstract class Entity
     {
-        protected string _name { get; set if (value != "") { this = value }; } = "no_name";
-        protected double _healthPoints { get; set if (value > 0) { this = value }; } = 0;
-        protected int _gold { get; set; } = 0;
+        protected string _name
+        {
+            get
+            {
+                return this._name;
+            }
+            set
+            {
+                if (value != "")
+                {
+                    this._name = value;
+                }
+            }
+        }
+        protected double _healthPoints
+        {
+            get
+            {
+                return this._healthPoints;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    this._healthPoints = value;
+                }
+            }
+        }
+        protected int _gold { get; set; }
 
         #region staty
-        protected int _strength { get; set if (value > 0) { this = value }; } = 1;
-        protected int _dexterity { get; set if (value > 0) { this = value }; } = 1;
-        protected int _intelligence { get; set if (value > 0) { this = value }; } = 1;
-        protected int _charisma { get; set if (value > 0) { this = value }; } = 1;
-        protected int _endurance { get; set if (value > 0) { this = value }; } = 1;
-        protected double _maxHealthPoints { get; set if (value > 0) { this = value }; } = 1;
+        protected int _strength
+        {
+            get
+            {
+                return this._strength;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    this._strength = value;
+                }
+            }
+        }
+        protected int _dexterity
+        {
+            get
+            {
+                return this._dexterity;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    this._dexterity = value;
+                }
+            }
+        }
+        protected int _intelligence
+        {
+            get
+            {
+                return this._intelligence;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    this._intelligence = value;
+                }
+            }
+        }
+        protected int _charisma
+        {
+            get
+            {
+                return this._charisma;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    this._charisma = value;
+                }
+            }
+        }
+        protected int _endurance
+        {
+            get
+            {
+                return this._endurance;
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    this._endurance = value;
+                }
+            }
+        }
+        protected double _maxHealthPoints
+        {
+            get
+            {
+                return this._maxHealthPoints;
+
+            }
+            set
+            {
+                if (value > 0)
+                {
+                    this._maxHealthPoints = value;
+                }
+            }
+        }
         #endregion
 
         public Entity(string name, int gold, int strength, int dexterity, int intelligence, int charisma, int endurance, double maxHealthPoints)
