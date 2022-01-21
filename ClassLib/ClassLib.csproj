@@ -46,6 +46,11 @@
     <Compile Include="Classes\Characters\NPC.cs" />
     <Compile Include="Classes\Characters\Player.cs" />
     <Compile Include="Classes\Items\Armors\Armor.cs" />
+    <Compile Include="Classes\Items\Armors\ChestArmor.cs" />
+    <Compile Include="Classes\Items\Armors\FootArmor.cs" />
+    <Compile Include="Classes\Items\Armors\HandArmor.cs" />
+    <Compile Include="Classes\Items\Armors\HeadArmor.cs" />
+    <Compile Include="Classes\Items\Armors\LegArmor.cs" />
     <Compile Include="Classes\Items\Consumable.cs" />
     <Compile Include="Classes\Items\Item.cs" />
     <Compile Include="Classes\Items\QuestItem.cs" />

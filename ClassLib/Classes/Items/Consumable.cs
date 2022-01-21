@@ -11,7 +11,7 @@ namespace ClassLib.Classes.Items
         protected string _description { get { return this._description; } set { if (value != "") { this._description = value; } } }
         protected double _healthPointsValue { get { return this._healthPointsValue; } set { if (value > 0) { this._healthPointsValue = value; }; } }
 
-        public Consumable(string description, double healthPointsValue, string name) : base(name)
+        public Consumable(string description, double healthPointsValue, string name, int lvlRequirement) : base(name, lvlRequirement)
         {
             if (description != "")
             {
