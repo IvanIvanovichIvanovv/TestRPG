@@ -15,7 +15,7 @@
         private double _maxHealthPoints { get; set; } = 1;
 
         #endregion
-        private int test;
+        
         public Entity(string name, int gold, int strength, int dexterity, int intelligence, int charisma, int endurance, double maxHealthPoints)
         {
             if (name != null)
