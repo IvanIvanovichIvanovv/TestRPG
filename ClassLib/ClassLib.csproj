@@ -58,6 +58,7 @@
     <Compile Include="Classes\Items\Consumable.cs" />
     <Compile Include="Classes\Items\Item.cs" />
     <Compile Include="Classes\Items\QuestItem.cs" />
+    <Compile Include="Classes\Items\Weapons\Sword.cs" />
     <Compile Include="Classes\Items\Weapons\Weapon.cs" />
     <Compile Include="Classes\Methods.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

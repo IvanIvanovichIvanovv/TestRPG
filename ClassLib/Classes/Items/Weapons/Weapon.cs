@@ -6,7 +6,22 @@ using System.Threading.Tasks;
 
 namespace ClassLib.Classes.Items.Weapons
 {
-    internal class Weapon
+    public class Weapon : Item
     {
+        protected double modifier;
+        protected string type;
+
+        public Weapon(string name, double modifier, int lvlRequirement, string type) : base(name, lvlRequirement)
+        {
+            this.modifier = modifier;
+        }
+        public double GetModifier()
+        {
+            return modifier;
+        }
+        public string GetType()
+        {
+            return type;
+        }
     }
 }

@@ -1,4 +1,13 @@
-﻿namespace ClassLib.Classes
+﻿using ClassLib.Classes.Items;
+using ClassLib.Classes.Items.Weapons;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace ClassLib.Classes
 {
     public abstract class Entity
     {
@@ -144,9 +153,12 @@
             }
         }
         #endregion
+
+        List<Item> _equipInvetory = new List<Item>();
+        protected Weapon _weapon;
         #endregion 
 
-        public Entity(string name, int gold, int strength, int dexterity, int intelligence, int charisma, int endurance, double maxHealthPoints, int level)
+        public Entity(string name, int gold, int strength, int dexterity, int intelligence, int charisma, int endurance, double maxHealthPoints, int level, Weapon weapon)
         {
             if (name != "")
             {
@@ -156,6 +168,15 @@
             {
                 this._maxHealthPoints = maxHealthPoints;
                 this._healthPoints = maxHealthPoints;
+            }
+            if (weapon != null)
+            {
+                this._weapon = weapon;
+            }
+            else
+            {
+                Weapon hands = new Weapon("bare hands", 1, 1);
+                this._weapon = hands;
             }
 
             int[] statTable = new int[6] { strength, dexterity, intelligence, charisma, endurance, level };
@@ -189,5 +210,11 @@
             if (!this.LifeCheck()) { this.Death(); }     
         }
         public void Death() { }
+        public double GetHealth() { return this._healthPoints; }
+        public int GetStrength() { return _strength; }
+        public int GetCharisma() { return _charisma; }
+        public int GetEndurance() { return _endurance; }
+
+        public Weapon GetWeapon() { return _weapon; }
     }
 }
