@@ -2,6 +2,7 @@
 {
     public abstract class Entity
     {
+        #region properties
         protected string _name
         {
             get
@@ -119,6 +120,7 @@
             }
         }
         #endregion
+        #endregion 
 
         public Entity(string name, int gold, int strength, int dexterity, int intelligence, int charisma, int endurance, double maxHealthPoints)
         {
@@ -140,9 +142,22 @@
                 if (statTable[i] > 0)
                 {
                     _statTable[i] = statTable[i];
-                    //cimcirymci
                 }
             }
+        }
+        public string[] PlayerData() 
+        {
+            string[] playerData= new string[9];
+            playerData[0] = $"Name,{_name}";
+            playerData[1] = $"HealthPoints,{_healthPoints}";
+            playerData[2] = $"Gold,{_gold}";
+            playerData[3] = $"Strength,{_strength}";
+            playerData[4] = $"Dexterity,{_dexterity}";
+            playerData[5] = $"Intelligence,{_intelligence}";
+            playerData[6] = $"Charisma,{_charisma}";
+            playerData[7] = $"Endurance,{_endurance}";
+            playerData[8]= $"MaxHealthPoints,{_maxHealthPoints}";
+            return playerData;
         }
     }
 }
