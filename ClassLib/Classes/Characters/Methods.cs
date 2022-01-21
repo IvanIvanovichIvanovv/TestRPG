@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ClassLib.Classes
 {
-    public static class Methods
+    public static class Methods  // klasa statyczna, zawsze istnieje
     {
+       
     }
 }
