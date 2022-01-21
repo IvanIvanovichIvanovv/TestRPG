@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLib.Classes
 {
-    public class Entity
+    public static class Methods
     {
     }
 }
