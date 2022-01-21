@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace ClassLib.Classes.Items
 {
-    internal class Item
+    public abstract class Item
     {
+        protected string _name { get; set; }  = "no_item"
+
+        public Item(string name)
+        {
+            if (name != "")
+            {
+                this._name = name;  
+            }
+        }
     }
 }

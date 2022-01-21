@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLib.Classes
 {
-    internal class NPC
+    public class NPC : Entity
     {
     }
 }

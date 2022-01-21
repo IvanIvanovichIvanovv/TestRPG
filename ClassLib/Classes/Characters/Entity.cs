@@ -1,24 +1,23 @@
 ﻿namespace ClassLib.Classes
 {
-    public class Entity
+    public abstract class Entity
     {
-        private string _name { get; set; } = "no_name";
-        private double _healthPoints { get; set; } = 0;
-        private int _gold { get; set; } = 0;
+        protected string _name { get; set if (value != "") { this = value }; } = "no_name";
+        protected double _healthPoints { get; set if (value > 0) { this = value }; } = 0;
+        protected int _gold { get; set; } = 0;
 
         #region staty
-        private int _strength { get; set; } = 1;
-        private int _dexterity { get; set; } = 1;
-        private int _intelligence { get; set; } = 1;
-        private int _charisma { get; set; } = 1;
-        private int _endurance { get; set; } = 1;
-        private double _maxHealthPoints { get; set; } = 1;
-
+        protected int _strength { get; set if (value > 0) { this = value }; } = 1;
+        protected int _dexterity { get; set if (value > 0) { this = value }; } = 1;
+        protected int _intelligence { get; set if (value > 0) { this = value }; } = 1;
+        protected int _charisma { get; set if (value > 0) { this = value }; } = 1;
+        protected int _endurance { get; set if (value > 0) { this = value }; } = 1;
+        protected double _maxHealthPoints { get; set if (value > 0) { this = value }; } = 1;
         #endregion
-        private int test;
+
         public Entity(string name, int gold, int strength, int dexterity, int intelligence, int charisma, int endurance, double maxHealthPoints)
         {
-            if (name != null)
+            if (name != "")
             {
                 this._name = name;
             }

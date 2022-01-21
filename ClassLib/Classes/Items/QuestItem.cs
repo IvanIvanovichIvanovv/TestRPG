@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassLib.Classes.Items
 {
-    internal class QuestItem
+    public class QuestItem : Item
     {
     }
 }
